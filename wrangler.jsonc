@@ -19,5 +19,6 @@
       "pattern": "www.as212802.net",
       "custom_domain": true
     }
-  ]
+  ],
+  "preview_urls": true
 }
