@@ -23,7 +23,6 @@
     "wrangler": "^4.37.1"
   },
   "devDependencies": {
-    "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.2"
   }
 }
