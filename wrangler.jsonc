@@ -1,0 +1,23 @@
+{
+  "name": "as212802-net",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2025-09-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    {
+      "pattern": "as212802.net",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.as212802.net",
+      "custom_domain": true
+    }
+  ]
+}

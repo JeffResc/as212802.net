@@ -1,29 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostCard from '../components/PostCard.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('posts'))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<BaseLayout title="Terminal">
-  <div class="index-content framed">
-    <h1 id="hello-there">Hello there!</h1>
-    <p>Welcome to the Astro Terminal theme! This is a port of the popular Hugo Terminal theme by panr, bringing the same retro terminal aesthetic to Astro.</p>
+<BaseLayout title="AS212802">
+  <div class="page">
+    <h1>Welcome to AS212802!</h1>
+
+    <h3>Information</h3>
+    AS212802 is an educational autonomous network operated by <a href="https://jeffresc.dev target="_blank" rel="noopener">Jeffrey Rescignano</a>.
+    
+    <h3>Links</h3>
     <p>
-      You can customise the colour scheme using panr's <a href="https://panr.github.io/terminal-css/"><strong>Terminal.css</strong></a> 
-      generator - all generated schemes are fully compatible with this theme.
+      <a href="https://www.peeringdb.com/net/40352" target="_blank" rel="noopener">peeringdb.com</a> | <a href="https://bgp.tools/as/212802" target="_blank" rel="noopener">bgp.tools</a> | <a href="https://bgp.he.net/AS212802" target="_blank" rel="noopener">bgp.he.net</a> | <a href="https://stat.ripe.net/resource/AS212802" target="_blank" rel="noopener">stat.ripe.net</a>
     </p>
+
+    <h3>Network Prefixes</h3>
+    AS212802 is responsible for the following prefixes:
+    <ul>
+      <li>2a0f:85c1:d4d::/48</li>
+    </ul>
+
+    <h3>Peering Policy</h3>
     <p>
-      <a href="https://panr.github.io/terminal-css/">
-        <img src="https://panr.github.io/hugo-theme-terminal-demo/img/terminal-css.png" alt="Terminal.css Preview" />
-      </a>
+      We maintain an open peering policy. For more information, contact <a href="mailto:peering@as212802.net">peering@as212802.net</a>.
     </p>
-  </div>
-  
-  <div class="posts">
-    {posts.map((post) => <PostCard post={post} />)}
+
+    <h3>Contact Information</h3>
+    <table>
+      <tr><td>General Inquiries</td><td><a href="mailto:hello@as212802.net">hello@as212802.net</a></td></tr>
+      <tr><td>Technical Inquiries</td><td><a href="mailto:noc@as212802.net">noc@as212802.net</a></td></tr>
+      <tr><td>Abuse Report</td><td><a href="mailto:abuse@as212802.net">abuse@as212802.net</a></td></tr>
+      <tr><td>Peering Requests</td><td><a href="mailto:peering@as212802.net">peering@as212802.net</a></td></tr>
+    </table>
   </div>
 </BaseLayout>
+
+<style>
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding-top: 1em;
+  }
+</style>
