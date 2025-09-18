@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="AS212802">
+<BaseLayout title="Home">
   <div class="page">
     <h1>Welcome to AS212802!</h1>
 
@@ -22,16 +22,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <h3>Peering Policy</h3>
     <p>
-      We maintain an open peering policy. For more information, contact <a href="mailto:peering@as212802.net">peering@as212802.net</a>.
+      We maintain an open peering policy. For more information, see our <a href="/policy">Peering Policy</a>.
     </p>
-
-    <h3>Contact Information</h3>
-    <table>
-      <tr><td>General Inquiries</td><td><a href="mailto:hello@as212802.net">hello@as212802.net</a></td></tr>
-      <tr><td>Technical Inquiries</td><td><a href="mailto:noc@as212802.net">noc@as212802.net</a></td></tr>
-      <tr><td>Abuse Report</td><td><a href="mailto:abuse@as212802.net">abuse@as212802.net</a></td></tr>
-      <tr><td>Peering Requests</td><td><a href="mailto:peering@as212802.net">peering@as212802.net</a></td></tr>
-    </table>
   </div>
 </BaseLayout>
 
@@ -39,9 +31,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .page {
     max-width: 760px;
     margin: 0 auto;
-  }
-
-  h1 {
-    padding-top: 1em;
   }
 </style>

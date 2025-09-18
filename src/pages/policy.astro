@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Peering Policy">
+  <div class="page">
+    <h1>Peering Policy</h1>
+    <p>
+      AS212802 has open peering policy; we are willing to peer over any exchange points we have in common.
+    </p>
+
+    <p>
+      Peering Policy
+    </p>
+    <ul>
+      <li>Our peering policy is open.</li>
+      <li>Only send us traffic destined for the routes we announce.</li>
+      <li>Do not point default routes to us for traffic that does not match the routes we announce to you.</li>
+      <li>Only send us traffic originating from your own networks, including downstreams.</li>
+      <li>We recommend that peers set a max-prefix limit based upon the listed values in our PeeringDB on sessions approved by us.</li>
+    </ul>
+
+    <p>
+      BGP Filtering
+    </p>
+    <ul>
+      <li>We use max-prefix filters for all peerings.</li>
+      <li>We will discard prefixes where one or more of the following conditions are met:</li>
+      <ul>
+        <li>IPv6 prefix length longer than /48</li>
+        <li>Private AS anywhere in the AS_PATH</li>
+        <li>Bogon prefixes as designated by IANA</li>
+        <li>Invalid RPKI</li>
+      </ul>
+    </ul>
+
+    <p>
+      Our network information:
+    </p>
+    <pre>
+      ASN: 212802
+      AS-SET: 212802:AS-JEFFREY-RESCIGNANO
+      Policy: Open
+    </pre>
+
+    <p>
+      To peer with us, you must have:
+    </p>
+    <ul>
+      <li>One or more common Internet Exchange with us / or request a tunnel connection</li>
+      <li>A publicly routable ASN</li>
+      <li>Completed ASN record in PeeringDB</li>
+      <li>One or more public routable IPv6 address space</li>
+    </ul>
+
+    <p>
+      If you meet the criteria above and would like to peer with us, you should respect following rules:
+    </p>
+
+    <ul>
+      <li>Only send routes that from your own network, and only announce address space which you are authorized to announce.</li>
+      <li>Only send traffic that is destined to routes that we announced to you.</li>
+    </ul>
+
+    <p>
+      If those rules work for you and you met the criteria - great! Drop an email to <a href="mailto:peering@as212802.net">peering@as212802.net</a>, tell me your desired peering method and your ASN. I will get back to you as soon as possible.
+    </p>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+</style>
